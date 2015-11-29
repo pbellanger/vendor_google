@@ -7,9 +7,7 @@ PRODUCT_PACKAGES := \
 	GoogleEars \
 	Newsstand \
 	PrebuiltKeep \
-	KoreanIME \
 	PrebuiltBugle \
-	DeviceAssist \
 	EditorsDocs \
 	EditorsSheets \
 	EditorsSlides \
