@@ -46,16 +46,16 @@ LOCAL_MODULE_OWNER := google
 LOCAL_DEX_PREOPT := false
 include $(BUILD_PREBUILT)
 
-include $(CLEAR_VARS)
+#include $(CLEAR_VARS)
 # DeviceAssist : 106163821
-LOCAL_MODULE := DeviceAssist
-LOCAL_SRC_FILES := com.google.android.apps.cavalry.apk
-LOCAL_MODULE_CLASS := APPS
-LOCAL_MODULE_TAGS := optional
-LOCAL_CERTIFICATE := PRESIGNED
-LOCAL_MODULE_OWNER := google
-LOCAL_DEX_PREOPT := false
-include $(BUILD_PREBUILT)
+#LOCAL_MODULE := DeviceAssist
+#LOCAL_SRC_FILES := com.google.android.apps.cavalry.apk
+#LOCAL_MODULE_CLASS := APPS
+#LOCAL_MODULE_TAGS := optional
+#LOCAL_CERTIFICATE := PRESIGNED
+#LOCAL_MODULE_OWNER := google
+#LOCAL_DEX_PREOPT := false
+#include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
 # CloudPrint2 : 1.26b
@@ -134,27 +134,27 @@ LOCAL_MODULE_OWNER := google
 LOCAL_DEX_PREOPT := false
 include $(BUILD_PREBUILT)
 
-include $(CLEAR_VARS)
+#include $(CLEAR_VARS)
 # Pay : 10.0-R227-v10
-LOCAL_MODULE := Pay
-LOCAL_SRC_FILES := com.google.android.apps.gmoney.apk
-LOCAL_MODULE_CLASS := APPS
-LOCAL_MODULE_TAGS := optional
-LOCAL_CERTIFICATE := PRESIGNED
-LOCAL_MODULE_OWNER := google
-LOCAL_DEX_PREOPT := false
-include $(BUILD_PREBUILT)
+#LOCAL_MODULE := Pay
+#LOCAL_SRC_FILES := com.google.android.apps.gmoney.apk
+#LOCAL_MODULE_CLASS := APPS
+#LOCAL_MODULE_TAGS := optional
+#LOCAL_CERTIFICATE := PRESIGNED
+#LOCAL_MODULE_OWNER := google
+#LOCAL_DEX_PREOPT := false
+#include $(BUILD_PREBUILT)
 
-include $(CLEAR_VARS)
+#include $(CLEAR_VARS)
 # HangOutDialer : 0.1.100944346
-LOCAL_MODULE := HangOutDialer
-LOCAL_SRC_FILES := com.google.android.apps.hangoutsdialer.apk
-LOCAL_MODULE_CLASS := APPS
-LOCAL_MODULE_TAGS := optional
-LOCAL_CERTIFICATE := PRESIGNED
-LOCAL_MODULE_OWNER := google
-LOCAL_DEX_PREOPT := false
-include $(BUILD_PREBUILT)
+#LOCAL_MODULE := HangOutDialer
+#LOCAL_SRC_FILES := com.google.android.apps.hangoutsdialer.apk
+#LOCAL_MODULE_CLASS := APPS
+#LOCAL_MODULE_TAGS := optional
+#LOCAL_CERTIFICATE := PRESIGNED
+#LOCAL_MODULE_OWNER := google
+#LOCAL_DEX_PREOPT := false
+#include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
 # Newsstand : 3.4.4
@@ -190,16 +190,16 @@ LOCAL_MODULE_OWNER := google
 LOCAL_DEX_PREOPT := false
 include $(BUILD_PREBUILT)
 
-include $(CLEAR_VARS)
+#include $(CLEAR_VARS)
 # PdfViewer : 2.2.283.28.30
-LOCAL_MODULE := PdfViewer
-LOCAL_SRC_FILES := com.google.android.apps.pdfviewer.apk
-LOCAL_MODULE_CLASS := APPS
-LOCAL_MODULE_TAGS := optional
-LOCAL_CERTIFICATE := PRESIGNED
-LOCAL_MODULE_OWNER := google
-LOCAL_DEX_PREOPT := false
-include $(BUILD_PREBUILT)
+#LOCAL_MODULE := PdfViewer
+#LOCAL_SRC_FILES := com.google.android.apps.pdfviewer.apk
+#LOCAL_MODULE_CLASS := APPS
+#LOCAL_MODULE_TAGS := optional
+#LOCAL_CERTIFICATE := PRESIGNED
+#LOCAL_MODULE_OWNER := google
+#LOCAL_DEX_PREOPT := false
+#include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
 # Photos : 1.9.0.107816786
@@ -306,16 +306,16 @@ LOCAL_MODULE_OWNER := google
 LOCAL_DEX_PREOPT := false
 include $(BUILD_PREBUILT)
 
-include $(CLEAR_VARS)
+#include $(CLEAR_VARS)
 # KoreanIME : 1.3.2.102018498-armeabi-v7a
-LOCAL_MODULE := KoreanIME
-LOCAL_SRC_FILES := com.google.android.inputmethod.korean.apk
-LOCAL_MODULE_CLASS := APPS
-LOCAL_MODULE_TAGS := optional
-LOCAL_CERTIFICATE := PRESIGNED
-LOCAL_MODULE_OWNER := google
-LOCAL_DEX_PREOPT := false
-include $(BUILD_PREBUILT)
+#LOCAL_MODULE := KoreanIME
+#LOCAL_SRC_FILES := com.google.android.inputmethod.korean.apk
+#LOCAL_MODULE_CLASS := APPS
+#LOCAL_MODULE_TAGS := optional
+#LOCAL_CERTIFICATE := PRESIGNED
+#LOCAL_MODULE_OWNER := google
+#LOCAL_DEX_PREOPT := false
+#include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
 # LatinImeGoogle : 4.1.23043.2297020
@@ -431,16 +431,16 @@ LOCAL_MODULE_OWNER := google
 LOCAL_DEX_PREOPT := false
 include $(BUILD_PREBUILT)
 
-include $(CLEAR_VARS)
+#include $(CLEAR_VARS)
 # Wallet : 1.0.103342659
-LOCAL_MODULE := Wallet
-LOCAL_SRC_FILES := com.google.android.apps.walletnfcrel.apk
-LOCAL_MODULE_CLASS := APPS
-LOCAL_MODULE_TAGS := optional
-LOCAL_CERTIFICATE := PRESIGNED
-LOCAL_MODULE_OWNER := google
-LOCAL_DEX_PREOPT := false
-include $(BUILD_PREBUILT)
+#LOCAL_MODULE := Wallet
+#LOCAL_SRC_FILES := com.google.android.apps.walletnfcrel.apk
+#LOCAL_MODULE_CLASS := APPS
+#LOCAL_MODULE_TAGS := optional
+#LOCAL_CERTIFICATE := PRESIGNED
+#LOCAL_MODULE_OWNER := google
+#LOCAL_DEX_PREOPT := false
+#include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
 # WebViewGoogle : 46.0.2490.76
@@ -741,17 +741,17 @@ LOCAL_MODULE_OWNER := google
 LOCAL_DEX_PREOPT := false
 include $(BUILD_PREBUILT)
 
-include $(CLEAR_VARS)
+#include $(CLEAR_VARS)
 # DeviceAssistStub : 0.1 (stub)
-LOCAL_MODULE := DeviceAssistStub
-LOCAL_SRC_FILES := stubs/com.google.android.apps.cavalry.apk
-LOCAL_MODULE_CLASS := APPS
-LOCAL_MODULE_TAGS := optional
-LOCAL_OVERRIDES_PACKAGES := DeviceAssist
-LOCAL_CERTIFICATE := PRESIGNED
-LOCAL_MODULE_OWNER := google
-LOCAL_DEX_PREOPT := false
-include $(BUILD_PREBUILT)
+#LOCAL_MODULE := DeviceAssistStub
+#LOCAL_SRC_FILES := stubs/com.google.android.apps.cavalry.apk
+#LOCAL_MODULE_CLASS := APPS
+#LOCAL_MODULE_TAGS := optional
+#LOCAL_OVERRIDES_PACKAGES := DeviceAssist
+#LOCAL_CERTIFICATE := PRESIGNED
+#LOCAL_MODULE_OWNER := google
+#LOCAL_DEX_PREOPT := false
+#include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
 # PrebuiltDeskClockGoogleStub : 0.1 (stub)
@@ -789,29 +789,29 @@ LOCAL_MODULE_OWNER := google
 LOCAL_DEX_PREOPT := false
 include $(BUILD_PREBUILT)
 
-include $(CLEAR_VARS)
+#include $(CLEAR_VARS)
 # AndroidForWork : 6.0-2280749
-LOCAL_MODULE := AndroidForWork
-LOCAL_SRC_FILES := com.google.android.androidforwork.apk
-LOCAL_MODULE_CLASS := APPS
-LOCAL_MODULE_TAGS := optional
-LOCAL_CERTIFICATE := PRESIGNED
-LOCAL_PRIVILEGED_MODULE := true
-LOCAL_MODULE_OWNER := google
-LOCAL_DEX_PREOPT := false
-include $(BUILD_PREBUILT)
+#LOCAL_MODULE := AndroidForWork
+#LOCAL_SRC_FILES := com.google.android.androidforwork.apk
+#LOCAL_MODULE_CLASS := APPS
+#LOCAL_MODULE_TAGS := optional
+#LOCAL_CERTIFICATE := PRESIGNED
+#LOCAL_PRIVILEGED_MODULE := true
+#LOCAL_MODULE_OWNER := google
+#LOCAL_DEX_PREOPT := false
+#include $(BUILD_PREBUILT)
 
-include $(CLEAR_VARS)
+#include $(CLEAR_VARS)
 # GCS : C.1.6.4 (2107901)
-LOCAL_MODULE := GCS
-LOCAL_SRC_FILES := com.google.android.apps.gcs.apk
-LOCAL_MODULE_CLASS := APPS
-LOCAL_MODULE_TAGS := optional
-LOCAL_CERTIFICATE := PRESIGNED
-LOCAL_PRIVILEGED_MODULE := true
-LOCAL_MODULE_OWNER := google
-LOCAL_DEX_PREOPT := false
-include $(BUILD_PREBUILT)
+#LOCAL_MODULE := GCS
+#LOCAL_SRC_FILES := com.google.android.apps.gcs.apk
+#LOCAL_MODULE_CLASS := APPS
+#LOCAL_MODULE_TAGS := optional
+#LOCAL_CERTIFICATE := PRESIGNED
+#LOCAL_PRIVILEGED_MODULE := true
+#LOCAL_MODULE_OWNER := google
+#LOCAL_DEX_PREOPT := false
+#include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
 # ConfigUpdater : 6.0-2256973
