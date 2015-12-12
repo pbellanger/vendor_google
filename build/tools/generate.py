@@ -61,7 +61,7 @@ packages = (
             'Galaxy4', 'HoloSpiralWallpaper', 'NoiseField', 'PhaseBeam')),
 	('com.google.android.apps.plus.apk', 'PlusOne'),
     ('com.google.android.apps.translate.apk', 'Translate'),
-    ('com.google.android.calculator.apk', 'CalculatorGoogle', 'Calculator'),
+    ('com.google.android.calculator.apk', 'CalculatorGoogle', ('Calculator', 'ExactCalculator')),
 	('com.google.android.calendar.apk', 'CalendarGooglePrebuilt', 'Calendar'),
 	('com.google.android.deskclock.apk', 'PrebuiltDeskClockGoogle',
         'DeskClock'),
