@@ -1,10 +1,21 @@
 GMS_FRWDIR := vendor/google/framework
+ifeq ($(TARGET_PRODUCT),occam)
 GMS_JAR := \
 	com.google.android.camera2.jar \
 	com.google.android.dialer.support.jar \
 	com.google.android.maps.jar \
 	com.google.android.media.effects.jar \
 	com.google.widevine.software.drm.jar \
+
+endif
+
+ifeq ($(TARGET_PRODUCT),nakasig)
+GMS_JAR := \
+	com.google.android.maps.jar \
+	com.google.android.media.effects.jar \
+	com.google.widevine.software.drm.jar \
+
+endif
 
 define gms-copy-jar
 $(eval PRODUCT_COPY_FILES += $(GMS_FRWDIR)/$(1):$(TARGET_COPY_OUT_SYSTEM)/framework/$(1):google)

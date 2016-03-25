@@ -1,6 +1,5 @@
 PRODUCT_PACKAGES := \
 	Chrome \
-	GoogleCamera \
 	Photos \
 	CalculatorGoogle \
 	CalendarGooglePrebuilt \
@@ -12,12 +11,16 @@ PRODUCT_PACKAGES := \
 	Music2 \
 	Hangouts \
 	GoogleTTS \
-
-PRODUCT_PACKAGES += \
 	GoogleContacts \
 	GoogleFeedback \
-	GoogleDialer \
 	TagGoogle \
+
+ifeq ($(TARGET_PRODUCT),occam)
+PRODUCT_PACKAGES += \
+	GoogleCamera \
+	GoogleDialer \
+
+endif
 
 #	AndroidForWork \
 #	GCS \
