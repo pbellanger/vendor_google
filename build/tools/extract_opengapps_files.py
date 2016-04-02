@@ -25,6 +25,7 @@ APPS_DIR = 'apps'
 ARCH = 'arm'
 SDK = '23'
 BUILD_VARIANT = 'stock'
+# Type the following command in the opengapps build directory: find . -name *.xml
 OPENGAPPS_DATA = [
     './Core/defaultetc/common/etc/sysconfig/google.xml',
     './Core/defaultetc/common/etc/sysconfig/google_build.xml',
@@ -36,6 +37,7 @@ OPENGAPPS_DATA = [
     './GApps/dialergoogle/common/etc/permissions/com.google.android.dialer.support.xml',
     './GApps/cameragooglelegacy/common/etc/permissions/com.google.android.camera2.xml',
     './GApps/cameragoogle/common/etc/permissions/com.google.android.camera.experimental2015.xml' ]
+# Type the following command in the opengapps build directory: find . -name *.bin
 OPENGAPPS_FACELOCK_6 = [
     './GApps/faceunlock/common/vendor/pittpatt/models/detection/multi_pose_face_landmark_detectors.8/left_eye-y0-yi45-p0-pi45-r0-ri20.lg_32-tree7-wmd.bin',
     './GApps/faceunlock/common/vendor/pittpatt/models/detection/multi_pose_face_landmark_detectors.8/landmark_group_meta_data.bin',
@@ -48,10 +50,12 @@ OPENGAPPS_FACELOCK_6 = [
     './GApps/faceunlock/common/vendor/pittpatt/models/detection/yaw_roll_face_detectors.7.1/head-y0-yi45-p0-pi45-rp30-ri30.5-v24-tree7-2-wmd.bin' ]
 OPENGAPPS_FACELOCK_5 = [
     './GApps/faceunlock/common/vendor/pittpatt/models/recognition/face.face.y0-y0-71-N-tree_7-wmd.bin' ]
+# Type the following command in the opengapps build directory: find . -name *.so
 OPENGAPPS_FACELOCK_2 = [
     './GApps/faceunlock/common/vendor/lib/libfrsdk.so',
     './GApps/faceunlock/common/lib/libfacelock_jni.so',
     './GApps/facedetect/common/lib/libfilterpack_facedetect.so' ]
+# Type the following command in the opengapps build directory: find . -name *.jar
 OPENGAPPS_JAR = [
     './Core/defaultframework/common/framework/com.google.widevine.software.drm.jar',
     './Core/defaultframework/common/framework/com.google.android.media.effects.jar',
@@ -59,10 +63,12 @@ OPENGAPPS_JAR = [
     './GApps/dialergoogle/common/framework/com.google.android.dialer.support.jar',
     './GApps/cameragooglelegacy/common/framework/com.google.android.camera2.jar',
     './GApps/cameragoogle/common/framework/com.google.android.camera.experimental2015.jar' ]
+# Type the following command in the opengapps build directory: find . -name *.so
 OPENGAPPS_LIB = [
     './Optional/swypelibs/common/lib/libjni_latinimegoogle.so', 
     './Optional/swypelibs/common/lib/libjni_keyboarddecoder.so' ]
-OPENGAPPS_APP = [ './Core/googlecontactssync/nodpi/app/GoogleContactsSyncAdapter/GoogleContactsSyncAdapter.apk', 
+OPENGAPPS_APP = [ 
+    './Core/googlecontactssync/nodpi/app/GoogleContactsSyncAdapter/GoogleContactsSyncAdapter.apk', 
     './GApps/books/nodpi/app/Books/Books.apk', 
     './GApps/calculatorgoogle/nodpi/app/CalculatorGoogle/CalculatorGoogle.apk', 
     './GApps/cloudprint/nodpi/app/CloudPrint2/CloudPrint2.apk', 
@@ -95,7 +101,8 @@ OPENGAPPS_APP = [ './Core/googlecontactssync/nodpi/app/GoogleContactsSyncAdapter
     './GApps/calsync/nodpi/app/GoogleCalendarSyncAdapter/GoogleCalendarSyncAdapter.apk', 
     './GApps/newswidget/nodpi/app/PrebuiltNewsWeather/PrebuiltNewsWeather.apk', 
     './GApps/maps/nodpi/app/Maps/Maps.apk' ]
-OPENGAPPS_PRIV_APP = [ './Core/setupwizarddefault/nodpi/priv-app/SetupWizard/SetupWizard.apk', 
+OPENGAPPS_PRIV_APP = [ 
+    './Core/setupwizarddefault/nodpi/priv-app/SetupWizard/SetupWizard.apk', 
     './Core/googleonetimeinitializer/nodpi/priv-app/GoogleOneTimeInitializer/GoogleOneTimeInitializer.apk', 
     './Core/googlepartnersetup/nodpi/priv-app/GooglePartnerSetup/GooglePartnerSetup.apk', 
     './Core/gsflogin/nodpi/priv-app/GoogleLoginService/GoogleLoginService.apk', 
@@ -121,7 +128,7 @@ def checkPrerequisites():
     return True
 
 def checkOpengappsBuildDir(path):
-    return os.path.exists(path)
+    return os.path.exists(os.path.join(path, 'Core')) and os.path.exists(os.path.join(path, 'GApps')) and os.path.exists(os.path.join(path, 'Optional'))
 
 def prepareDirectories():
     VENDOR_DIR = os.path.join(os.path.dirname(__file__), '..', '..')
@@ -182,8 +189,6 @@ def apk_rename(filename):
         os.rename(filename, newname)
 
 if __name__ == '__main__':
-    checkPrerequisites()
-    
     if len(sys.argv) != 2:
         print 'Usage: %s opengapps_build_path'%sys.argv[0]
         sys.exit(1)
@@ -193,6 +198,8 @@ if __name__ == '__main__':
         print 'Error: %s is not a valid openGapps build directory.'%opengapps_path
         sys.exit(1)
 
+    checkPrerequisites()
+    
     vendor_dir = prepareDirectories()
     
     # Copy xml files to vendor/google repo
@@ -209,14 +216,14 @@ if __name__ == '__main__':
     # Copy app libraries files to vendor/google repo
     dst = os.path.join(vendor_dir, APPS_DIR)
     copyOpenGappsFiles(opengapps_path, OPENGAPPS_LIB, dst, 1)
-    # Rename apps to package name and copy to google/vendor repo
+    # Copy apps to google/vendor repo and rename based on package name
     for apk in OPENGAPPS_APP:
         apk_filename = os.path.basename(apk)
         src = os.path.join(opengapps_path, apk)
         dst = os.path.join(vendor_dir, APPS_DIR, apk_filename)
         shutil.copy(src, dst)
         apk_rename(dst)
-    # Rename priv-apps to package name and copy to google/vendor repo
+    # Copy priv-apps to google/vendor repo and rename based on package name
     for apk in OPENGAPPS_PRIV_APP:
         apk_filename = os.path.basename(apk)
         src = os.path.join(opengapps_path, apk)

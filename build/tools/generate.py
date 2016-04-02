@@ -4,14 +4,9 @@ import subprocess
 import shutil
 import zipfile
 
-for E in ('TOP', 'ANDROID_BUILD_TOP'):
-    top = os.getenv(E)
-    if top:
-        break
-else:
-    assert False
+VENDOR_DIR = os.path.join(os.path.dirname(__file__), '..', '..')
 STUBS_PREFIX = 'stubs'
-dst = os.path.join(top, 'vendor/google/apps')
+dst = os.path.join(VENDOR_DIR, 'apps')
 STUBS = os.path.join(dst, STUBS_PREFIX)
 
 def stub(fn):
@@ -38,11 +33,11 @@ need_to_odex = (
 )
 
 packages = (
-    ('com.android.chrome.apk', 'Chrome', 'Browser'),
-    ('com.android.facelock.apk', 'FaceLock', ),
+        ('com.android.chrome.apk', 'Chrome', 'Browser'),
+        ('com.android.facelock.apk', 'FaceLock', ),
 	('com.google.android.GoogleCamera.apk', 'GoogleCamera', 'Camera2'),
 	('com.google.android.apps.books.apk', 'Books'),
-	('com.google.android.apps.cavalry.apk', 'DeviceAssist'),
+#	('com.google.android.apps.cavalry.apk', 'DeviceAssist'),
 	('com.google.android.apps.cloudprint.apk', 'CloudPrint2'),
 	('com.google.android.apps.docs.apk', 'Drive'),
 	('com.google.android.apps.docs.editors.docs.apk', 'EditorsDocs'),
@@ -50,18 +45,18 @@ packages = (
 	('com.google.android.apps.docs.editors.slides.apk', 'EditorsSlides'),
 	('com.google.android.apps.fitness.apk', 'FitnessPrebuilt'),
 	('com.google.android.apps.genie.geniewidget.apk', 'PrebuiltNewsWeather',),
-    ('com.google.android.apps.gmoney.apk', 'Pay',),
-	('com.google.android.apps.hangoutsdialer.apk', 'HangOutDialer'),
+#       ('com.google.android.apps.gmoney.apk', 'Pay',),
+#	('com.google.android.apps.hangoutsdialer.apk', 'HangOutDialer'),
 	('com.google.android.apps.magazines.apk', 'Newsstand'),
 	('com.google.android.apps.maps.apk', 'Maps'),
-	('com.google.android.apps.messaging.apk', 'PrebuiltBugle', 'messaging'),
-	('com.google.android.apps.pdfviewer.apk', 'PdfViewer'),
+#	('com.google.android.apps.messaging.apk', 'PrebuiltBugle', 'messaging'),
+#	('com.google.android.apps.pdfviewer.apk', 'PdfViewer'),
 	('com.google.android.apps.photos.apk', 'Photos',
         ('VisualizationWallpapers', 'Gallery2', 'PhotoTable', 'LiveWallpapers',
             'Galaxy4', 'HoloSpiralWallpaper', 'NoiseField', 'PhaseBeam')),
-	('com.google.android.apps.plus.apk', 'PlusOne'),
-    ('com.google.android.apps.translate.apk', 'Translate'),
-    ('com.google.android.calculator.apk', 'CalculatorGoogle', ('Calculator', 'ExactCalculator')),
+#	('com.google.android.apps.plus.apk', 'PlusOne'),
+#        ('com.google.android.apps.translate.apk', 'Translate'),
+        ('com.google.android.calculator.apk', 'CalculatorGoogle', ('Calculator', 'ExactCalculator')),
 	('com.google.android.calendar.apk', 'CalendarGooglePrebuilt', 'Calendar'),
 	('com.google.android.deskclock.apk', 'PrebuiltDeskClockGoogle',
         'DeskClock'),
@@ -69,9 +64,9 @@ packages = (
 	('com.google.android.gm.apk', 'PrebuiltGmail', 'Email'),
 	('com.google.android.gm.exchange.apk', 'PrebuiltExchange3Google',
     'Exchange2'),
-	('com.google.android.inputmethod.korean.apk', 'KoreanIME',),
+#	('com.google.android.inputmethod.korean.apk', 'KoreanIME',),
 	('com.google.android.inputmethod.latin.apk', 'LatinImeGoogle',
-        ('LatinIME', 'OpenWnn',) ),
+        ('LatinIME', 'OpenWnn',), ('libjni_keyboarddecoder', 'libjni_latinimegoogle',), ),
 	('com.google.android.keep.apk', 'PrebuiltKeep',),
 	('com.google.android.launcher.apk', 'GoogleHome', 'Launcher2'),
 	('com.google.android.marvin.talkback.apk', 'talkback'),
@@ -79,14 +74,13 @@ packages = (
 	('com.google.android.play.games.apk', 'PlayGames',),
 	('com.google.android.syncadapters.contacts.apk',
     'GoogleContactsSyncAdapter',),
-	('com.google.android.talk.apk', 'Hangouts',),
+#	('com.google.android.talk.apk', 'Hangouts',),
 	('com.google.android.tts.apk', 'GoogleTTS', 'PicoTts'),
 	('com.google.android.videos.apk', 'Videos',),
-    ('com.google.android.apps.walletnfcrel.apk', 'Wallet',),
-	('com.google.android.webview.apk', 'WebViewGoogle', 'webview',
-        ('libwebviewchromium_loader', 'libwebviewchromium_plat_support'),),
+#        ('com.google.android.apps.walletnfcrel.apk', 'Wallet',),
+	('com.google.android.webview.apk', 'WebViewGoogle', 'webview',),
 	('com.google.android.youtube.apk', 'YouTube'),
-    ('com.google.earth.apk', 'GoogleEarth'),
+#        ('com.google.earth.apk', 'GoogleEarth'),
 
 	(stub('com.google.android.apps.docs.editors.docs.apk'), 'EditorsDocsStub',
             'EditorsDocs'),
@@ -140,22 +134,25 @@ def system(cmd):
     return os.system("bash -c '%s' > /dev/null"%cmd)
 
 def get_apk_info(filename):
-    cmd = 'aapt', 'd', 'badging', filename
+    cmd = 'aapt d badging ' + filename
+    print('DEBUG (get_apk_info): %s' % cmd)
     attrs = {}
-    with subprocess.Popen(cmd, stdout=subprocess.PIPE) as proc:
-        for line in proc.stdout:
-            line = line[:-1]
-            line = line.decode('utf-8')
-            if line.startswith('package: '):
-                line = line.split(None, 1)[1]
+    p = os.popen(cmd)
+    for line in p:
+        print('DEBUG (get_apk_info): line = %s' % line)
+        line = line[:-1]
+#        line = line.decode('utf-8')
+        if line.startswith('package: '):
+            line = line.split(None, 1)[1]
+            line = line.strip()
+            while line:
+                k, line = line.split('=', 1)
+                _, line = line.split("'", 1)
+                v, line = line.split("'", 1)
+                attrs[k] = v
                 line = line.strip()
-                while line:
-                    k, line = line.split('=', 1)
-                    _, line = line.split("'", 1)
-                    v, line = line.split("'", 1)
-                    attrs[k] = v
-                    line = line.strip()
-                break
+            break
+    print('DEBUG (get_apk_info): attrs = %s' % attrs)
     return attrs
 
 def generate_package(info, privileged):
@@ -202,7 +199,7 @@ def generate_package(info, privileged):
     else:
         srcfile = filename
 
-    attrs = get_apk_info(srcfile)
+    attrs = get_apk_info(dstfile)
     yield '# %s : %s'%(package, attrs['versionName'])
 
     yield 'LOCAL_MODULE := %s'%package
@@ -211,7 +208,7 @@ def generate_package(info, privileged):
     yield 'LOCAL_MODULE_TAGS := optional'
 
     jnis = []
-    shutil.copyfile(srcfile, dstfile)
+#    shutil.copyfile(srcfile, dstfile)
 
     if 0 and system('unzip -t %s "lib/*.so"'%(dstfile)) == 0:
         jni_path = os.path.join(dst, package)
