@@ -24,8 +24,10 @@ APPS_DIR = 'apps'
 # OpenGapps build information
 ARCH = 'arm'
 SDK = '23'
-BUILD_VARIANT = 'stock'
+BUILD_VARIANT = 'super'
 # Type the following command in the opengapps build directory: find . -name *.xml
+# Only results of command above starting with ./Core or ./GApps
+# List vary with build variant
 OPENGAPPS_DATA = [
     './Core/defaultetc/common/etc/sysconfig/google.xml',
     './Core/defaultetc/common/etc/sysconfig/google_build.xml',
@@ -38,6 +40,8 @@ OPENGAPPS_DATA = [
     './GApps/cameragooglelegacy/common/etc/permissions/com.google.android.camera2.xml',
     './GApps/cameragoogle/common/etc/permissions/com.google.android.camera.experimental2015.xml' ]
 # Type the following command in the opengapps build directory: find . -name *.bin
+# Only results of command above starting with ./Core or ./GApps
+# List vary with build variant
 OPENGAPPS_FACELOCK_6 = [
     './GApps/faceunlock/common/vendor/pittpatt/models/detection/multi_pose_face_landmark_detectors.8/left_eye-y0-yi45-p0-pi45-r0-ri20.lg_32-tree7-wmd.bin',
     './GApps/faceunlock/common/vendor/pittpatt/models/detection/multi_pose_face_landmark_detectors.8/landmark_group_meta_data.bin',
@@ -51,11 +55,15 @@ OPENGAPPS_FACELOCK_6 = [
 OPENGAPPS_FACELOCK_5 = [
     './GApps/faceunlock/common/vendor/pittpatt/models/recognition/face.face.y0-y0-71-N-tree_7-wmd.bin' ]
 # Type the following command in the opengapps build directory: find . -name *.so
+# Only results of command above starting with ./Core or ./GApps
+# List vary with build variant
 OPENGAPPS_FACELOCK_2 = [
     './GApps/faceunlock/common/vendor/lib/libfrsdk.so',
     './GApps/faceunlock/common/lib/libfacelock_jni.so',
     './GApps/facedetect/common/lib/libfilterpack_facedetect.so' ]
 # Type the following command in the opengapps build directory: find . -name *.jar
+# Only results of command above starting with ./Core or ./GApps
+# List vary with build variant
 OPENGAPPS_JAR = [
     './Core/defaultframework/common/framework/com.google.widevine.software.drm.jar',
     './Core/defaultframework/common/framework/com.google.android.media.effects.jar',
@@ -64,59 +72,81 @@ OPENGAPPS_JAR = [
     './GApps/cameragooglelegacy/common/framework/com.google.android.camera2.jar',
     './GApps/cameragoogle/common/framework/com.google.android.camera.experimental2015.jar' ]
 # Type the following command in the opengapps build directory: find . -name *.so
+# Only results of command above starting with ./Core or ./GApps
+# List vary with build variant
 OPENGAPPS_LIB = [
     './Optional/swypelibs/common/lib/libjni_latinimegoogle.so', 
     './Optional/swypelibs/common/lib/libjni_keyboarddecoder.so' ]
+# Type the following command in the opengapps build directory: find . -name *.apk |grep nodpi/app/
+# Only results of command above starting with ./Core or ./GApps
+# List vary with build variant
 OPENGAPPS_APP = [ 
-    './Core/googlecontactssync/nodpi/app/GoogleContactsSyncAdapter/GoogleContactsSyncAdapter.apk', 
-    './GApps/books/nodpi/app/Books/Books.apk', 
-    './GApps/calculatorgoogle/nodpi/app/CalculatorGoogle/CalculatorGoogle.apk', 
-    './GApps/cloudprint/nodpi/app/CloudPrint2/CloudPrint2.apk', 
-    './GApps/clockgoogle/nodpi/app/PrebuiltDeskClockGoogle/PrebuiltDeskClockGoogle.apk', 
-    './GApps/ears/nodpi/app/GoogleEars/GoogleEars.apk', 
-    './GApps/docs/nodpi/app/EditorsDocs/EditorsDocs.apk', 
-    './GApps/chrome/nodpi/app/Chrome/Chrome.apk', 
-    './GApps/faceunlock/nodpi/app/FaceLock/FaceLock.apk', 
-    './GApps/gmail/nodpi/app/PrebuiltGmail/PrebuiltGmail.apk', 
-    './GApps/drive/nodpi/app/Drive/Drive.apk', 
-    './GApps/webviewgoogle/nodpi/app/WebViewGoogle/WebViewGoogle.apk', 
-    './GApps/calendargoogle/nodpi/app/CalendarGooglePrebuilt/CalendarGooglePrebuilt.apk', 
-    './GApps/keyboardgoogle/nodpi/app/LatinImeGoogle/LatinImeGoogle.apk', 
-    './GApps/youtube/nodpi/app/YouTube/YouTube.apk', 
-    './GApps/photos/nodpi/app/Photos/Photos.apk', 
-    './GApps/exchangegoogle/nodpi/app/PrebuiltExchange3Google/PrebuiltExchange3Google.apk', 
-    './GApps/keep/nodpi/app/PrebuiltKeep/PrebuiltKeep.apk', 
-    './GApps/sheets/nodpi/app/EditorsSheets/EditorsSheets.apk', 
-    './GApps/fitness/nodpi/app/FitnessPrebuilt/FitnessPrebuilt.apk', 
-    './GApps/slides/nodpi/app/EditorsSlides/EditorsSlides.apk', 
-    './GApps/playgames/nodpi/app/PlayGames/PlayGames.apk', 
-    './GApps/newsstand/nodpi/app/Newsstand/Newsstand.apk', 
-    './GApps/googlenow/nodpi/app/GoogleHome/GoogleHome.apk', 
-    './GApps/cameragooglelegacy/nodpi/app/GoogleCamera/GoogleCamera.apk', 
-    './GApps/talkback/nodpi/app/talkback/talkback.apk', 
-    './GApps/music/nodpi/app/Music2/Music2.apk', 
-    './GApps/cameragoogle/nodpi/app/GoogleCamera/GoogleCamera.apk', 
-    './GApps/googletts/nodpi/app/GoogleTTS/GoogleTTS.apk', 
-    './GApps/movies/nodpi/app/Videos/Videos.apk', 
-    './GApps/calsync/nodpi/app/GoogleCalendarSyncAdapter/GoogleCalendarSyncAdapter.apk', 
-    './GApps/newswidget/nodpi/app/PrebuiltNewsWeather/PrebuiltNewsWeather.apk', 
-    './GApps/maps/nodpi/app/Maps/Maps.apk' ]
+    './Core/googlecontactssync/nodpi/app/GoogleContactsSyncAdapter/GoogleContactsSyncAdapter.apk',
+    './GApps/books/nodpi/app/Books/Books.apk',
+    './GApps/calculatorgoogle/nodpi/app/CalculatorGoogle/CalculatorGoogle.apk',
+    './GApps/cloudprint/nodpi/app/CloudPrint2/CloudPrint2.apk',
+    './GApps/clockgoogle/nodpi/app/PrebuiltDeskClockGoogle/PrebuiltDeskClockGoogle.apk',
+    './GApps/translate/nodpi/app/TranslatePrebuilt/TranslatePrebuilt.apk',
+    './GApps/japanese/nodpi/app/GoogleJapaneseInput/GoogleJapaneseInput.apk',
+    './GApps/ears/nodpi/app/GoogleEars/GoogleEars.apk',
+    './GApps/docs/nodpi/app/EditorsDocs/EditorsDocs.apk',
+    './GApps/korean/nodpi/app/KoreanIME/KoreanIME.apk',
+    './GApps/chrome/nodpi/app/Chrome/Chrome.apk',
+    './GApps/pinyin/nodpi/app/GooglePinyinIME/GooglePinyinIME.apk',
+    './GApps/faceunlock/nodpi/app/FaceLock/FaceLock.apk',
+    './GApps/gmail/nodpi/app/PrebuiltGmail/PrebuiltGmail.apk',
+    './GApps/drive/nodpi/app/Drive/Drive.apk',
+    './GApps/projectfi/nodpi/app/Tycho/Tycho.apk',
+    './GApps/androidpay/nodpi/app/Wallet/Wallet.apk',
+    './GApps/webviewgoogle/nodpi/app/WebViewGoogle/WebViewGoogle.apk',
+    './GApps/calendargoogle/nodpi/app/CalendarGooglePrebuilt/CalendarGooglePrebuilt.apk',
+    './GApps/keyboardgoogle/nodpi/app/LatinImeGoogle/LatinImeGoogle.apk',
+    './GApps/youtube/nodpi/app/YouTube/YouTube.apk',
+    './GApps/photos/nodpi/app/Photos/Photos.apk',
+    './GApps/exchangegoogle/nodpi/app/PrebuiltExchange3Google/PrebuiltExchange3Google.apk',
+    './GApps/keep/nodpi/app/PrebuiltKeep/PrebuiltKeep.apk',
+    './GApps/zhuyin/nodpi/app/GoogleZhuyinIME/GoogleZhuyinIME.apk',
+    './GApps/sheets/nodpi/app/EditorsSheets/EditorsSheets.apk',
+    './GApps/googleplus/nodpi/app/PlusOne/PlusOne.apk',
+    './GApps/fitness/nodpi/app/FitnessPrebuilt/FitnessPrebuilt.apk',
+    './GApps/slides/nodpi/app/EditorsSlides/EditorsSlides.apk',
+    './GApps/playgames/nodpi/app/PlayGames/PlayGames.apk',
+    './GApps/newsstand/nodpi/app/Newsstand/Newsstand.apk',
+    './GApps/googlenow/nodpi/app/GoogleHome/GoogleHome.apk',
+    './GApps/cameragooglelegacy/nodpi/app/GoogleCamera/GoogleCamera.apk',
+    './GApps/dmagent/nodpi/app/DMAgent/DMAgent.apk',
+    './GApps/talkback/nodpi/app/talkback/talkback.apk',
+    './GApps/music/nodpi/app/Music2/Music2.apk',
+    './GApps/street/nodpi/app/Street/Street.apk',
+    './GApps/cameragoogle/nodpi/app/GoogleCamera/GoogleCamera.apk',
+    './GApps/googletts/nodpi/app/GoogleTTS/GoogleTTS.apk',
+    './GApps/movies/nodpi/app/Videos/Videos.apk',
+    './GApps/calsync/nodpi/app/GoogleCalendarSyncAdapter/GoogleCalendarSyncAdapter.apk',
+    './GApps/earth/nodpi/app/GoogleEarth/GoogleEarth.apk',
+    './GApps/newswidget/nodpi/app/PrebuiltNewsWeather/PrebuiltNewsWeather.apk',
+    './GApps/maps/nodpi/app/Maps/Maps.apk',
+    './GApps/indic/nodpi/app/GoogleHindiIME/GoogleHindiIME.apk' ]
+# Type the following command in the opengapps build directory: find . -name *.apk |grep nodpi/priv-app/
+# Only results of command above starting with ./Core or ./GApps
+# List vary with build variant
 OPENGAPPS_PRIV_APP = [ 
-    './Core/setupwizarddefault/nodpi/priv-app/SetupWizard/SetupWizard.apk', 
-    './Core/googleonetimeinitializer/nodpi/priv-app/GoogleOneTimeInitializer/GoogleOneTimeInitializer.apk', 
-    './Core/googlepartnersetup/nodpi/priv-app/GooglePartnerSetup/GooglePartnerSetup.apk', 
-    './Core/gsflogin/nodpi/priv-app/GoogleLoginService/GoogleLoginService.apk', 
-    './Core/vending/nodpi/priv-app/Phonesky/Phonesky.apk', 
-    './Core/configupdater/nodpi/priv-app/ConfigUpdater/ConfigUpdater.apk', 
-    './Core/gmscore/nodpi/priv-app/PrebuiltGmsCore/PrebuiltGmsCore.apk', 
-    './Core/setupwizardtablet/nodpi/priv-app/SetupWizard/SetupWizard.apk', 
-    './Core/googlebackuptransport/nodpi/priv-app/GoogleBackupTransport/GoogleBackupTransport.apk', 
-    './Core/googlefeedback/nodpi/priv-app/GoogleFeedback/GoogleFeedback.apk', 
-    './Core/gsfcore/nodpi/priv-app/GoogleServicesFramework/GoogleServicesFramework.apk', 
-    './GApps/search/nodpi/priv-app/Velvet/Velvet.apk', 
-    './GApps/packageinstallergoogle/nodpi/priv-app/GooglePackageInstaller/GooglePackageInstaller.apk', 
-    './GApps/taggoogle/nodpi/priv-app/TagGoogle/TagGoogle.apk', 
-    './GApps/dialergoogle/nodpi/priv-app/GoogleDialer/GoogleDialer.apk', 
+    './Core/setupwizarddefault/nodpi/priv-app/SetupWizard/SetupWizard.apk',
+    './Core/googleonetimeinitializer/nodpi/priv-app/GoogleOneTimeInitializer/GoogleOneTimeInitializer.apk',
+    './Core/googlepartnersetup/nodpi/priv-app/GooglePartnerSetup/GooglePartnerSetup.apk',
+    './Core/gsflogin/nodpi/priv-app/GoogleLoginService/GoogleLoginService.apk',
+    './Core/vending/nodpi/priv-app/Phonesky/Phonesky.apk',
+    './Core/configupdater/nodpi/priv-app/ConfigUpdater/ConfigUpdater.apk',
+    './Core/gmscore/nodpi/priv-app/PrebuiltGmsCore/PrebuiltGmsCore.apk',
+    './Core/setupwizardtablet/nodpi/priv-app/SetupWizard/SetupWizard.apk',
+    './Core/googlebackuptransport/nodpi/priv-app/GoogleBackupTransport/GoogleBackupTransport.apk',
+    './Core/googlefeedback/nodpi/priv-app/GoogleFeedback/GoogleFeedback.apk',
+    './Core/gsfcore/nodpi/priv-app/GoogleServicesFramework/GoogleServicesFramework.apk',
+    './GApps/search/nodpi/priv-app/Velvet/Velvet.apk',
+    './GApps/androidforwork/nodpi/priv-app/AndroidForWork/AndroidForWork.apk',
+    './GApps/packageinstallergoogle/nodpi/priv-app/GooglePackageInstaller/GooglePackageInstaller.apk',
+    './GApps/taggoogle/nodpi/priv-app/TagGoogle/TagGoogle.apk',
+    './GApps/dialergoogle/nodpi/priv-app/GoogleDialer/GoogleDialer.apk',
+    './GApps/gcs/nodpi/priv-app/GCS/GCS.apk',
     './GApps/contactsgoogle/nodpi/priv-app/GoogleContacts/GoogleContacts.apk' ]
 
 def checkPrerequisites():
@@ -164,7 +194,6 @@ def copyOpenGappsFiles(build_path, opengapps_files, dst_dir, common_dir_depth):
 
 def apk_rename(filename):
     cmd = 'aapt d badging ' + filename
-    print 'DEBUG : %s' % cmd
     attrs = {}
     p = os.popen(cmd)
     for line in p:

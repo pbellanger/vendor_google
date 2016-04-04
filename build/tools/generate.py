@@ -54,8 +54,8 @@ packages = (
 	('com.google.android.apps.photos.apk', 'Photos',
         ('VisualizationWallpapers', 'Gallery2', 'PhotoTable', 'LiveWallpapers',
             'Galaxy4', 'HoloSpiralWallpaper', 'NoiseField', 'PhaseBeam')),
-#	('com.google.android.apps.plus.apk', 'PlusOne'),
-#        ('com.google.android.apps.translate.apk', 'Translate'),
+	('com.google.android.apps.plus.apk', 'PlusOne'),
+        ('com.google.android.apps.translate.apk', 'Translate'),
         ('com.google.android.calculator.apk', 'CalculatorGoogle', ('Calculator', 'ExactCalculator')),
 	('com.google.android.calendar.apk', 'CalendarGooglePrebuilt', 'Calendar'),
 	('com.google.android.deskclock.apk', 'PrebuiltDeskClockGoogle',
@@ -77,33 +77,27 @@ packages = (
 #	('com.google.android.talk.apk', 'Hangouts',),
 	('com.google.android.tts.apk', 'GoogleTTS', 'PicoTts'),
 	('com.google.android.videos.apk', 'Videos',),
-#        ('com.google.android.apps.walletnfcrel.apk', 'Wallet',),
+        ('com.google.android.apps.walletnfcrel.apk', 'Wallet',),
 	('com.google.android.webview.apk', 'WebViewGoogle', 'webview',),
 	('com.google.android.youtube.apk', 'YouTube'),
-#        ('com.google.earth.apk', 'GoogleEarth'),
+        ('com.google.earth.apk', 'GoogleEarth'),
 
-	(stub('com.google.android.apps.docs.editors.docs.apk'), 'EditorsDocsStub',
-            'EditorsDocs'),
-	(stub('com.google.android.apps.docs.editors.sheets.apk'),
-            'EditorsSheetsStub', 'EditorsSheets'),
-	(stub('com.google.android.apps.docs.editors.slides.apk'),
-            'EditorsSlidesStub', 'EditorsSlides'),
-	(stub('com.google.android.apps.magazines.apk'), 'NewsstandStub',
-            'Newsstand'),
-	(stub('com.google.android.apps.messaging.apk'), 'PrebuiltBugleStub',
-            'PrebuiltBugle'),
-    (stub('com.google.android.keep.apk'), 'PrebuiltKeepStub', 'PrebuiltKeep'),
-	(stub('com.google.android.apps.books.apk'), 'BooksStub', 'Books'),
-	(stub('com.google.android.apps.cloudprint.apk'), 'CloudPrint2Stub', 'CloudPrint2'),
-	(stub('com.google.android.apps.docs.apk'), 'DriveStub', 'Drive'),
-	(stub('com.google.android.apps.fitness.apk'), 'FitnessPrebuiltStub',
-            'FitnessPrebuilt'),
-	(stub('com.google.android.apps.maps.apk'), 'MapsStub', 'Maps'),
-	(stub('com.google.android.apps.plus.apk'), 'PlusOneStub', 'PlusOne'),
-	(stub('com.google.android.apps.translate.apk'), 'TranslateStub', 'Translate'),
-	(stub('com.google.android.videos.apk'), 'VideosStub', 'Videos'),
-	(stub('com.google.android.youtube.apk'), 'YouTubeStub', 'YouTube'),
-	(stub('com.google.android.talk.apk'), 'HangoutsStub','Hangouts',),
+#	(stub('com.google.android.apps.docs.editors.docs.apk'), 'EditorsDocsStub', 'EditorsDocs'),
+#	(stub('com.google.android.apps.docs.editors.sheets.apk'), 'EditorsSheetsStub', 'EditorsSheets'),
+#	(stub('com.google.android.apps.docs.editors.slides.apk'), 'EditorsSlidesStub', 'EditorsSlides'),
+#	(stub('com.google.android.apps.magazines.apk'), 'NewsstandStub', 'Newsstand'),
+#	(stub('com.google.android.apps.messaging.apk'), 'PrebuiltBugleStub', 'PrebuiltBugle'),
+#       (stub('com.google.android.keep.apk'), 'PrebuiltKeepStub', 'PrebuiltKeep'),
+#	(stub('com.google.android.apps.books.apk'), 'BooksStub', 'Books'),
+#	(stub('com.google.android.apps.cloudprint.apk'), 'CloudPrint2Stub', 'CloudPrint2'),
+#	(stub('com.google.android.apps.docs.apk'), 'DriveStub', 'Drive'),
+#	(stub('com.google.android.apps.fitness.apk'), 'FitnessPrebuiltStub', 'FitnessPrebuilt'),
+#	(stub('com.google.android.apps.maps.apk'), 'MapsStub', 'Maps'),
+#	(stub('com.google.android.apps.plus.apk'), 'PlusOneStub', 'PlusOne'),
+#	(stub('com.google.android.apps.translate.apk'), 'TranslateStub', 'Translate'),
+#	(stub('com.google.android.videos.apk'), 'VideosStub', 'Videos'),
+#	(stub('com.google.android.youtube.apk'), 'YouTubeStub', 'YouTube'),
+#	(stub('com.google.android.talk.apk'), 'HangoutsStub','Hangouts',),
 
 )
 
@@ -135,11 +129,11 @@ def system(cmd):
 
 def get_apk_info(filename):
     cmd = 'aapt d badging ' + filename
-    print('DEBUG (get_apk_info): %s' % cmd)
+#    print('DEBUG (get_apk_info): %s' % cmd)
     attrs = {}
     p = os.popen(cmd)
     for line in p:
-        print('DEBUG (get_apk_info): line = %s' % line)
+#        print('DEBUG (get_apk_info): line = %s' % line)
         line = line[:-1]
 #        line = line.decode('utf-8')
         if line.startswith('package: '):
@@ -152,7 +146,7 @@ def get_apk_info(filename):
                 attrs[k] = v
                 line = line.strip()
             break
-    print('DEBUG (get_apk_info): attrs = %s' % attrs)
+#    print('DEBUG (get_apk_info): attrs = %s' % attrs)
     return attrs
 
 def generate_package(info, privileged):
