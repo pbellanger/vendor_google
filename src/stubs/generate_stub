@@ -107,6 +107,12 @@ apks = {
     "com.google.android.apps.fitness": "PrebuiltFitness",
     "com.google.android.apps.maps": "Maps",
     "com.google.android.talk": "Hangouts",
+    "com.google.android.apps.docs.editors.docs.apk": "EditorsDocs",
+    "com.google.android.apps.docs.editors.sheets.apk": "EditorsSheets",
+    "com.google.android.apps.docs.editors.slides.apk": "EditorsSlides",
+    "com.google.android.apps.magazines.apk": "Newsstand",
+    "com.google.android.apps.messaging.apk": "PrebuiltBugle",
+    "com.google.android.keep.apk": "PrebuiltKeep" 
 }
 
 disabled = (
@@ -167,7 +173,7 @@ class GenerateStub:
             "-f", "build/core/main.mk", "all_modules")
         assert os.system(" ".join(build_cmd)) == 0
 
-        self.overridePublicCert(apkfile)
+#        self.overridePublicCert(apkfile)
 
     def prepare_resources(self, resource_key):
         rid, res_name = resource_key
@@ -188,18 +194,19 @@ class GenerateStub:
 
         with TempDir() as tmpdir:
             script = ("7z d %(dstfile)s %(cert)s",
-                "7z x -o%(tmpdir)s %(srcfile)s %(cert)s",
+                "7z x -o %(tmpdir)s %(srcfile)s %(cert)s",
                     "(cd %(tmpdir)s && 7z a %(dstfile)s %(cert)s)",
                     "zipalign -f -p 4 %(dstfile)s %(dstfile)s.aligned",
                     "mv -f %(dstfile)s.aligned %(dstfile)s",
             )
-            script = "&&".join(script)
+            script = " && ".join(script)
             script = script%{
                     "dstfile": apkfile,
                     "srcfile": self.apk.filename,
                     "cert" : CERT,
                     "tmpdir": tmpdir
             }
+            print "DEBUG (overridePublicCert(%s, %s)): %s" % (self, ".".join(apkfile, "zip"), script)
             system(script)
 
     def generateBooleans(self):
@@ -343,8 +350,11 @@ class GenerateStub:
 
 
 if __name__ == '__main__':
+    print "DEBUG(main): Args=%s" % sys.argv[1:]
     for F in sys.argv[1:]:
+        print "DEBUG(main): F=%s" % F
         stub = GenerateStub(F)
+        print "DEBUG(main): stub=%s" % stub.getPkgName
         if not stub.getPkgName() in apks:
             continue
         stub.build()

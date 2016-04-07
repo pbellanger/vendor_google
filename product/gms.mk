@@ -7,7 +7,6 @@ PRODUCT_PACKAGES := \
 	GoogleEars \
 	Newsstand \
 	PrebuiltKeep \
-	PrebuiltBugle \
 	EditorsDocs \
 	EditorsSheets \
 	EditorsSlides \
@@ -17,11 +16,12 @@ PRODUCT_PACKAGES := \
 	Videos \
 	YouTube \
 	talkback \
+	GoogleEarth \
 
 #PRODUCT_PACKAGES += \
-	GoogleEarth \
-	HangOutDialer \
-	PdfViewer \
+#	PrebuiltBugle \
+#	HangOutDialer \
+#	PdfViewer \
 
 $(call inherit-product-if-exists, vendor/google/product/gms-core.mk)
 

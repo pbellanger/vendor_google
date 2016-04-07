@@ -1,7 +1,7 @@
 LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
-# Chrome : 46.0.2490.76
+# Chrome : 49.0.2623.105
 LOCAL_MODULE := Chrome
 LOCAL_SRC_FILES := com.android.chrome.apk
 LOCAL_MODULE_CLASS := APPS
@@ -13,7 +13,7 @@ LOCAL_DEX_PREOPT := false
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-# FaceLock : 6.0-2256973
+# FaceLock : 6.0.1
 LOCAL_MODULE := FaceLock
 LOCAL_SRC_FILES := com.android.facelock.apk
 LOCAL_MODULE_CLASS := APPS
@@ -24,7 +24,7 @@ LOCAL_DEX_PREOPT := false
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-# GoogleCamera : 2.7.008 (2130300-30)
+# GoogleCamera : 3.1.025 (2617469-30)
 LOCAL_MODULE := GoogleCamera
 LOCAL_SRC_FILES := com.google.android.GoogleCamera.apk
 LOCAL_MODULE_CLASS := APPS
@@ -36,7 +36,7 @@ LOCAL_DEX_PREOPT := false
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-# Books : 3.7.21
+# Books : 3.7.75
 LOCAL_MODULE := Books
 LOCAL_SRC_FILES := com.google.android.apps.books.apk
 LOCAL_MODULE_CLASS := APPS
@@ -46,19 +46,8 @@ LOCAL_MODULE_OWNER := google
 LOCAL_DEX_PREOPT := false
 include $(BUILD_PREBUILT)
 
-#include $(CLEAR_VARS)
-# DeviceAssist : 106163821
-#LOCAL_MODULE := DeviceAssist
-#LOCAL_SRC_FILES := com.google.android.apps.cavalry.apk
-#LOCAL_MODULE_CLASS := APPS
-#LOCAL_MODULE_TAGS := optional
-#LOCAL_CERTIFICATE := PRESIGNED
-#LOCAL_MODULE_OWNER := google
-#LOCAL_DEX_PREOPT := false
-#include $(BUILD_PREBUILT)
-
 include $(CLEAR_VARS)
-# CloudPrint2 : 1.26b
+# CloudPrint2 : 1.33b
 LOCAL_MODULE := CloudPrint2
 LOCAL_SRC_FILES := com.google.android.apps.cloudprint.apk
 LOCAL_MODULE_CLASS := APPS
@@ -69,7 +58,7 @@ LOCAL_DEX_PREOPT := false
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-# Drive : 2.3.453.15.34
+# Drive : 2.3.631.15.30
 LOCAL_MODULE := Drive
 LOCAL_SRC_FILES := com.google.android.apps.docs.apk
 LOCAL_MODULE_CLASS := APPS
@@ -80,7 +69,7 @@ LOCAL_DEX_PREOPT := false
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-# EditorsDocs : 1.4.452.12.34
+# EditorsDocs : 1.6.112.12.30
 LOCAL_MODULE := EditorsDocs
 LOCAL_SRC_FILES := com.google.android.apps.docs.editors.docs.apk
 LOCAL_MODULE_CLASS := APPS
@@ -91,7 +80,7 @@ LOCAL_DEX_PREOPT := false
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-# EditorsSheets : 1.4.452.09.34
+# EditorsSheets : 1.6.112.06.30
 LOCAL_MODULE := EditorsSheets
 LOCAL_SRC_FILES := com.google.android.apps.docs.editors.sheets.apk
 LOCAL_MODULE_CLASS := APPS
@@ -102,7 +91,7 @@ LOCAL_DEX_PREOPT := false
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-# EditorsSlides : 1.2.452.12.34
+# EditorsSlides : 1.6.112.10.30
 LOCAL_MODULE := EditorsSlides
 LOCAL_SRC_FILES := com.google.android.apps.docs.editors.slides.apk
 LOCAL_MODULE_CLASS := APPS
@@ -113,7 +102,7 @@ LOCAL_DEX_PREOPT := false
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-# FitnessPrebuilt : 1.55.44-006
+# FitnessPrebuilt : 1.56.14-000
 LOCAL_MODULE := FitnessPrebuilt
 LOCAL_SRC_FILES := com.google.android.apps.fitness.apk
 LOCAL_MODULE_CLASS := APPS
@@ -134,30 +123,8 @@ LOCAL_MODULE_OWNER := google
 LOCAL_DEX_PREOPT := false
 include $(BUILD_PREBUILT)
 
-#include $(CLEAR_VARS)
-# Pay : 10.0-R227-v10
-#LOCAL_MODULE := Pay
-#LOCAL_SRC_FILES := com.google.android.apps.gmoney.apk
-#LOCAL_MODULE_CLASS := APPS
-#LOCAL_MODULE_TAGS := optional
-#LOCAL_CERTIFICATE := PRESIGNED
-#LOCAL_MODULE_OWNER := google
-#LOCAL_DEX_PREOPT := false
-#include $(BUILD_PREBUILT)
-
-#include $(CLEAR_VARS)
-# HangOutDialer : 0.1.100944346
-#LOCAL_MODULE := HangOutDialer
-#LOCAL_SRC_FILES := com.google.android.apps.hangoutsdialer.apk
-#LOCAL_MODULE_CLASS := APPS
-#LOCAL_MODULE_TAGS := optional
-#LOCAL_CERTIFICATE := PRESIGNED
-#LOCAL_MODULE_OWNER := google
-#LOCAL_DEX_PREOPT := false
-#include $(BUILD_PREBUILT)
-
 include $(CLEAR_VARS)
-# Newsstand : 3.4.4
+# Newsstand : 3.5.1
 LOCAL_MODULE := Newsstand
 LOCAL_SRC_FILES := com.google.android.apps.magazines.apk
 LOCAL_MODULE_CLASS := APPS
@@ -168,7 +135,7 @@ LOCAL_DEX_PREOPT := false
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-# Maps : 9.17.0
+# Maps : 9.22.1
 LOCAL_MODULE := Maps
 LOCAL_SRC_FILES := com.google.android.apps.maps.apk
 LOCAL_MODULE_CLASS := APPS
@@ -179,30 +146,7 @@ LOCAL_DEX_PREOPT := false
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-# PrebuiltBugle : 1.6.043 (2395722-36.phone)
-LOCAL_MODULE := PrebuiltBugle
-LOCAL_SRC_FILES := com.google.android.apps.messaging.apk
-LOCAL_MODULE_CLASS := APPS
-LOCAL_MODULE_TAGS := optional
-LOCAL_OVERRIDES_PACKAGES := messaging
-LOCAL_CERTIFICATE := PRESIGNED
-LOCAL_MODULE_OWNER := google
-LOCAL_DEX_PREOPT := false
-include $(BUILD_PREBUILT)
-
-#include $(CLEAR_VARS)
-# PdfViewer : 2.2.283.28.30
-#LOCAL_MODULE := PdfViewer
-#LOCAL_SRC_FILES := com.google.android.apps.pdfviewer.apk
-#LOCAL_MODULE_CLASS := APPS
-#LOCAL_MODULE_TAGS := optional
-#LOCAL_CERTIFICATE := PRESIGNED
-#LOCAL_MODULE_OWNER := google
-#LOCAL_DEX_PREOPT := false
-#include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-# Photos : 1.9.0.107816786
+# Photos : 1.16.0.117494210
 LOCAL_MODULE := Photos
 LOCAL_SRC_FILES := com.google.android.apps.photos.apk
 LOCAL_MODULE_CLASS := APPS
@@ -214,7 +158,7 @@ LOCAL_DEX_PREOPT := false
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-# PlusOne : 6.7.0.106735273
+# PlusOne : 7.5.0.117765045
 LOCAL_MODULE := PlusOne
 LOCAL_SRC_FILES := com.google.android.apps.plus.apk
 LOCAL_MODULE_CLASS := APPS
@@ -236,7 +180,7 @@ LOCAL_DEX_PREOPT := false
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-# CalculatorGoogle : 5.2 (2280749)
+# CalculatorGoogle : 5.2 (2419427)
 LOCAL_MODULE := CalculatorGoogle
 LOCAL_SRC_FILES := com.google.android.calculator.apk
 LOCAL_MODULE_CLASS := APPS
@@ -248,7 +192,7 @@ LOCAL_DEX_PREOPT := false
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-# CalendarGooglePrebuilt : 5.2.7-107213440-release
+# CalendarGooglePrebuilt : 5.3.8-117343094-release
 LOCAL_MODULE := CalendarGooglePrebuilt
 LOCAL_SRC_FILES := com.google.android.calendar.apk
 LOCAL_MODULE_CLASS := APPS
@@ -260,7 +204,7 @@ LOCAL_DEX_PREOPT := false
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-# PrebuiltDeskClockGoogle : 4.2.1 (2383161)
+# PrebuiltDeskClockGoogle : 4.3 (2552012)
 LOCAL_MODULE := PrebuiltDeskClockGoogle
 LOCAL_SRC_FILES := com.google.android.deskclock.apk
 LOCAL_MODULE_CLASS := APPS
@@ -283,7 +227,7 @@ LOCAL_DEX_PREOPT := false
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-# PrebuiltGmail : 5.8.107203005.release
+# PrebuiltGmail : 6.0.115979076.release
 LOCAL_MODULE := PrebuiltGmail
 LOCAL_SRC_FILES := com.google.android.gm.apk
 LOCAL_MODULE_CLASS := APPS
@@ -295,7 +239,7 @@ LOCAL_DEX_PREOPT := false
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-# PrebuiltExchange3Google : 5.0.101238867
+# PrebuiltExchange3Google : 5.0.106634657
 LOCAL_MODULE := PrebuiltExchange3Google
 LOCAL_SRC_FILES := com.google.android.gm.exchange.apk
 LOCAL_MODULE_CLASS := APPS
@@ -306,31 +250,21 @@ LOCAL_MODULE_OWNER := google
 LOCAL_DEX_PREOPT := false
 include $(BUILD_PREBUILT)
 
-#include $(CLEAR_VARS)
-# KoreanIME : 1.3.2.102018498-armeabi-v7a
-#LOCAL_MODULE := KoreanIME
-#LOCAL_SRC_FILES := com.google.android.inputmethod.korean.apk
-#LOCAL_MODULE_CLASS := APPS
-#LOCAL_MODULE_TAGS := optional
-#LOCAL_CERTIFICATE := PRESIGNED
-#LOCAL_MODULE_OWNER := google
-#LOCAL_DEX_PREOPT := false
-#include $(BUILD_PREBUILT)
-
 include $(CLEAR_VARS)
-# LatinImeGoogle : 4.1.23043.2297020
+# LatinImeGoogle : 4.1.23163.2622203
 LOCAL_MODULE := LatinImeGoogle
 LOCAL_SRC_FILES := com.google.android.inputmethod.latin.apk
 LOCAL_MODULE_CLASS := APPS
 LOCAL_MODULE_TAGS := optional
 LOCAL_OVERRIDES_PACKAGES := LatinIME OpenWnn
+LOCAL_REQUIRED_MODULES := libjni_keyboarddecoder libjni_latinimegoogle
 LOCAL_CERTIFICATE := PRESIGNED
 LOCAL_MODULE_OWNER := google
 LOCAL_DEX_PREOPT := false
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-# PrebuiltKeep : 3.2.444.0
+# PrebuiltKeep : 3.3.102.0
 LOCAL_MODULE := PrebuiltKeep
 LOCAL_SRC_FILES := com.google.android.keep.apk
 LOCAL_MODULE_CLASS := APPS
@@ -341,7 +275,7 @@ LOCAL_DEX_PREOPT := false
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-# GoogleHome : 1.2.small
+# GoogleHome : 1.3.large
 LOCAL_MODULE := GoogleHome
 LOCAL_SRC_FILES := com.google.android.launcher.apk
 LOCAL_MODULE_CLASS := APPS
@@ -353,7 +287,7 @@ LOCAL_DEX_PREOPT := false
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-# talkback : 4.3.1
+# talkback : 4.4.1
 LOCAL_MODULE := talkback
 LOCAL_SRC_FILES := com.google.android.marvin.talkback.apk
 LOCAL_MODULE_CLASS := APPS
@@ -364,7 +298,7 @@ LOCAL_DEX_PREOPT := false
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-# Music2 : 6.1.2116T.2441907
+# Music2 : 6.5.2513X.2681020
 LOCAL_MODULE := Music2
 LOCAL_SRC_FILES := com.google.android.music.apk
 LOCAL_MODULE_CLASS := APPS
@@ -376,7 +310,7 @@ LOCAL_DEX_PREOPT := false
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-# PlayGames : 3.4.12 (2379351-036)
+# PlayGames : 3.6.27 (2647216-030)
 LOCAL_MODULE := PlayGames
 LOCAL_SRC_FILES := com.google.android.play.games.apk
 LOCAL_MODULE_CLASS := APPS
@@ -387,7 +321,7 @@ LOCAL_DEX_PREOPT := false
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-# GoogleContactsSyncAdapter : 6.0-2280749
+# GoogleContactsSyncAdapter : 6.0.1
 LOCAL_MODULE := GoogleContactsSyncAdapter
 LOCAL_SRC_FILES := com.google.android.syncadapters.contacts.apk
 LOCAL_MODULE_CLASS := APPS
@@ -398,18 +332,7 @@ LOCAL_DEX_PREOPT := false
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-# Hangouts : 6.0.107278502
-LOCAL_MODULE := Hangouts
-LOCAL_SRC_FILES := com.google.android.talk.apk
-LOCAL_MODULE_CLASS := APPS
-LOCAL_MODULE_TAGS := optional
-LOCAL_CERTIFICATE := PRESIGNED
-LOCAL_MODULE_OWNER := google
-LOCAL_DEX_PREOPT := false
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-# GoogleTTS : 3.7.12.2235583.arm.arm_neon
+# GoogleTTS : 3.8.16
 LOCAL_MODULE := GoogleTTS
 LOCAL_SRC_FILES := com.google.android.tts.apk
 LOCAL_MODULE_CLASS := APPS
@@ -421,7 +344,7 @@ LOCAL_DEX_PREOPT := false
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-# Videos : 3.9.23
+# Videos : 3.12.10
 LOCAL_MODULE := Videos
 LOCAL_SRC_FILES := com.google.android.videos.apk
 LOCAL_MODULE_CLASS := APPS
@@ -431,32 +354,31 @@ LOCAL_MODULE_OWNER := google
 LOCAL_DEX_PREOPT := false
 include $(BUILD_PREBUILT)
 
-#include $(CLEAR_VARS)
-# Wallet : 1.0.103342659
-#LOCAL_MODULE := Wallet
-#LOCAL_SRC_FILES := com.google.android.apps.walletnfcrel.apk
-#LOCAL_MODULE_CLASS := APPS
-#LOCAL_MODULE_TAGS := optional
-#LOCAL_CERTIFICATE := PRESIGNED
-#LOCAL_MODULE_OWNER := google
-#LOCAL_DEX_PREOPT := false
-#include $(BUILD_PREBUILT)
-
 include $(CLEAR_VARS)
-# WebViewGoogle : 46.0.2490.76
-LOCAL_MODULE := WebViewGoogle
-LOCAL_SRC_FILES := com.google.android.webview.apk
+# Wallet : 1.2.111627672
+LOCAL_MODULE := Wallet
+LOCAL_SRC_FILES := com.google.android.apps.walletnfcrel.apk
 LOCAL_MODULE_CLASS := APPS
 LOCAL_MODULE_TAGS := optional
-LOCAL_OVERRIDES_PACKAGES := webview
-LOCAL_REQUIRED_MODULES := libwebviewchromium_loader libwebviewchromium_plat_support
 LOCAL_CERTIFICATE := PRESIGNED
 LOCAL_MODULE_OWNER := google
 LOCAL_DEX_PREOPT := false
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-# YouTube : 10.46.56
+# WebViewGoogle : 48.0.2564.106
+LOCAL_MODULE := WebViewGoogle
+LOCAL_SRC_FILES := com.google.android.webview.apk
+LOCAL_MODULE_CLASS := APPS
+LOCAL_MODULE_TAGS := optional
+LOCAL_OVERRIDES_PACKAGES := webview
+LOCAL_CERTIFICATE := PRESIGNED
+LOCAL_MODULE_OWNER := google
+LOCAL_DEX_PREOPT := false
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+# YouTube : 11.10.57
 LOCAL_MODULE := YouTube
 LOCAL_SRC_FILES := com.google.android.youtube.apk
 LOCAL_MODULE_CLASS := APPS
@@ -478,7 +400,7 @@ LOCAL_DEX_PREOPT := false
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-# EditorsDocsStub : 0.1 (stub)
+# EditorsDocsStub : 1.6.112.12.30
 LOCAL_MODULE := EditorsDocsStub
 LOCAL_SRC_FILES := stubs/com.google.android.apps.docs.editors.docs.apk
 LOCAL_MODULE_CLASS := APPS
@@ -490,7 +412,7 @@ LOCAL_DEX_PREOPT := false
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-# EditorsSheetsStub : 0.1 (stub)
+# EditorsSheetsStub : 1.6.112.06.30
 LOCAL_MODULE := EditorsSheetsStub
 LOCAL_SRC_FILES := stubs/com.google.android.apps.docs.editors.sheets.apk
 LOCAL_MODULE_CLASS := APPS
@@ -502,7 +424,7 @@ LOCAL_DEX_PREOPT := false
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-# EditorsSlidesStub : 0.1 (stub)
+# EditorsSlidesStub : 1.6.112.10.30
 LOCAL_MODULE := EditorsSlidesStub
 LOCAL_SRC_FILES := stubs/com.google.android.apps.docs.editors.slides.apk
 LOCAL_MODULE_CLASS := APPS
@@ -514,7 +436,7 @@ LOCAL_DEX_PREOPT := false
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-# NewsstandStub : 0.1
+# NewsstandStub : 3.5.1
 LOCAL_MODULE := NewsstandStub
 LOCAL_SRC_FILES := stubs/com.google.android.apps.magazines.apk
 LOCAL_MODULE_CLASS := APPS
@@ -526,19 +448,7 @@ LOCAL_DEX_PREOPT := false
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-# PrebuiltBugleStub : 0.1 (2161619)
-LOCAL_MODULE := PrebuiltBugleStub
-LOCAL_SRC_FILES := stubs/com.google.android.apps.messaging.apk
-LOCAL_MODULE_CLASS := APPS
-LOCAL_MODULE_TAGS := optional
-LOCAL_OVERRIDES_PACKAGES := PrebuiltBugle
-LOCAL_CERTIFICATE := PRESIGNED
-LOCAL_MODULE_OWNER := google
-LOCAL_DEX_PREOPT := false
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-# PrebuiltKeepStub : 0.1 (stub)
+# PrebuiltKeepStub : 3.3.102.0
 LOCAL_MODULE := PrebuiltKeepStub
 LOCAL_SRC_FILES := stubs/com.google.android.keep.apk
 LOCAL_MODULE_CLASS := APPS
@@ -550,7 +460,7 @@ LOCAL_DEX_PREOPT := false
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-# BooksStub : 0.1 (stub)
+# BooksStub : 3.7.75
 LOCAL_MODULE := BooksStub
 LOCAL_SRC_FILES := stubs/com.google.android.apps.books.apk
 LOCAL_MODULE_CLASS := APPS
@@ -562,7 +472,7 @@ LOCAL_DEX_PREOPT := false
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-# CloudPrint2Stub : 0.1 (stub)
+# CloudPrint2Stub : 1.33b
 LOCAL_MODULE := CloudPrint2Stub
 LOCAL_SRC_FILES := stubs/com.google.android.apps.cloudprint.apk
 LOCAL_MODULE_CLASS := APPS
@@ -574,7 +484,7 @@ LOCAL_DEX_PREOPT := false
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-# DriveStub : 0.1 (stub)
+# DriveStub : 2.3.631.15.30
 LOCAL_MODULE := DriveStub
 LOCAL_SRC_FILES := stubs/com.google.android.apps.docs.apk
 LOCAL_MODULE_CLASS := APPS
@@ -586,7 +496,7 @@ LOCAL_DEX_PREOPT := false
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-# FitnessPrebuiltStub : 0.1 (stub)
+# FitnessPrebuiltStub : 1.56.14-000
 LOCAL_MODULE := FitnessPrebuiltStub
 LOCAL_SRC_FILES := stubs/com.google.android.apps.fitness.apk
 LOCAL_MODULE_CLASS := APPS
@@ -598,7 +508,7 @@ LOCAL_DEX_PREOPT := false
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-# MapsStub : 0.1 (stub)
+# MapsStub : 9.22.1
 LOCAL_MODULE := MapsStub
 LOCAL_SRC_FILES := stubs/com.google.android.apps.maps.apk
 LOCAL_MODULE_CLASS := APPS
@@ -610,7 +520,7 @@ LOCAL_DEX_PREOPT := false
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-# PlusOneStub : 0.1 (stub)
+# PlusOneStub : 7.5.0.117765045
 LOCAL_MODULE := PlusOneStub
 LOCAL_SRC_FILES := stubs/com.google.android.apps.plus.apk
 LOCAL_MODULE_CLASS := APPS
@@ -622,7 +532,7 @@ LOCAL_DEX_PREOPT := false
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-# TranslateStub : 0.1 (stub)
+# TranslateStub : 4.4.0.RC01.104701208
 LOCAL_MODULE := TranslateStub
 LOCAL_SRC_FILES := stubs/com.google.android.apps.translate.apk
 LOCAL_MODULE_CLASS := APPS
@@ -634,7 +544,7 @@ LOCAL_DEX_PREOPT := false
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-# VideosStub : 0.1 (stub)
+# VideosStub : 3.12.10
 LOCAL_MODULE := VideosStub
 LOCAL_SRC_FILES := stubs/com.google.android.videos.apk
 LOCAL_MODULE_CLASS := APPS
@@ -646,7 +556,7 @@ LOCAL_DEX_PREOPT := false
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-# YouTubeStub : 0.1 (stub)
+# YouTubeStub : 11.10.57
 LOCAL_MODULE := YouTubeStub
 LOCAL_SRC_FILES := stubs/com.google.android.youtube.apk
 LOCAL_MODULE_CLASS := APPS
@@ -658,127 +568,7 @@ LOCAL_DEX_PREOPT := false
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-# HangoutsStub : 0.1 (stub)
-LOCAL_MODULE := HangoutsStub
-LOCAL_SRC_FILES := stubs/com.google.android.talk.apk
-LOCAL_MODULE_CLASS := APPS
-LOCAL_MODULE_TAGS := optional
-LOCAL_OVERRIDES_PACKAGES := Hangouts
-LOCAL_CERTIFICATE := PRESIGNED
-LOCAL_MODULE_OWNER := google
-LOCAL_DEX_PREOPT := false
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-# CalendarGooglePrebuiltStub : 0.1 (stub)
-LOCAL_MODULE := CalendarGooglePrebuiltStub
-LOCAL_SRC_FILES := stubs/com.google.android.calendar.apk
-LOCAL_MODULE_CLASS := APPS
-LOCAL_MODULE_TAGS := optional
-LOCAL_OVERRIDES_PACKAGES := CalendarGooglePrebuilt
-LOCAL_CERTIFICATE := PRESIGNED
-LOCAL_MODULE_OWNER := google
-LOCAL_DEX_PREOPT := false
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-# Music2Stub : 0.1 (stub)
-LOCAL_MODULE := Music2Stub
-LOCAL_SRC_FILES := stubs/com.google.android.music.apk
-LOCAL_MODULE_CLASS := APPS
-LOCAL_MODULE_TAGS := optional
-LOCAL_OVERRIDES_PACKAGES := Music2
-LOCAL_CERTIFICATE := PRESIGNED
-LOCAL_MODULE_OWNER := google
-LOCAL_DEX_PREOPT := false
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-# PhotosStub : 0.1 (stub)
-LOCAL_MODULE := PhotosStub
-LOCAL_SRC_FILES := stubs/com.google.android.apps.photos.apk
-LOCAL_MODULE_CLASS := APPS
-LOCAL_MODULE_TAGS := optional
-LOCAL_OVERRIDES_PACKAGES := Photos
-LOCAL_CERTIFICATE := PRESIGNED
-LOCAL_MODULE_OWNER := google
-LOCAL_DEX_PREOPT := false
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-# ChromeStub : 0.1 (stub)
-LOCAL_MODULE := ChromeStub
-LOCAL_SRC_FILES := stubs/com.android.chrome.apk
-LOCAL_MODULE_CLASS := APPS
-LOCAL_MODULE_TAGS := optional
-LOCAL_OVERRIDES_PACKAGES := Chrome
-LOCAL_CERTIFICATE := PRESIGNED
-LOCAL_MODULE_OWNER := google
-LOCAL_DEX_PREOPT := false
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-# GoogleCameraStub : 0.1 (stub)
-LOCAL_MODULE := GoogleCameraStub
-LOCAL_SRC_FILES := stubs/com.google.android.GoogleCamera.apk
-LOCAL_MODULE_CLASS := APPS
-LOCAL_MODULE_TAGS := optional
-LOCAL_OVERRIDES_PACKAGES := GoogleCamera
-LOCAL_CERTIFICATE := PRESIGNED
-LOCAL_MODULE_OWNER := google
-LOCAL_DEX_PREOPT := false
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-# PlayGamesStub : 0.1 (stub)
-LOCAL_MODULE := PlayGamesStub
-LOCAL_SRC_FILES := stubs/com.google.android.play.games.apk
-LOCAL_MODULE_CLASS := APPS
-LOCAL_MODULE_TAGS := optional
-LOCAL_OVERRIDES_PACKAGES := PlayGames
-LOCAL_CERTIFICATE := PRESIGNED
-LOCAL_MODULE_OWNER := google
-LOCAL_DEX_PREOPT := false
-include $(BUILD_PREBUILT)
-
-#include $(CLEAR_VARS)
-# DeviceAssistStub : 0.1 (stub)
-#LOCAL_MODULE := DeviceAssistStub
-#LOCAL_SRC_FILES := stubs/com.google.android.apps.cavalry.apk
-#LOCAL_MODULE_CLASS := APPS
-#LOCAL_MODULE_TAGS := optional
-#LOCAL_OVERRIDES_PACKAGES := DeviceAssist
-#LOCAL_CERTIFICATE := PRESIGNED
-#LOCAL_MODULE_OWNER := google
-#LOCAL_DEX_PREOPT := false
-#include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-# PrebuiltDeskClockGoogleStub : 0.1 (stub)
-LOCAL_MODULE := PrebuiltDeskClockGoogleStub
-LOCAL_SRC_FILES := stubs/com.google.android.deskclock.apk
-LOCAL_MODULE_CLASS := APPS
-LOCAL_MODULE_TAGS := optional
-LOCAL_OVERRIDES_PACKAGES := PrebuiltDeskClockGoogle
-LOCAL_CERTIFICATE := PRESIGNED
-LOCAL_MODULE_OWNER := google
-LOCAL_DEX_PREOPT := false
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-# PrebuiltGmailStub : 0.1 (stub)
-LOCAL_MODULE := PrebuiltGmailStub
-LOCAL_SRC_FILES := stubs/com.google.android.gm.apk
-LOCAL_MODULE_CLASS := APPS
-LOCAL_MODULE_TAGS := optional
-LOCAL_OVERRIDES_PACKAGES := PrebuiltGmail
-LOCAL_CERTIFICATE := PRESIGNED
-LOCAL_MODULE_OWNER := google
-LOCAL_DEX_PREOPT := false
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-# Phonesky : 6.0.0
+# Phonesky : 6.3.16.B-all [0] 2697688
 LOCAL_MODULE := Phonesky
 LOCAL_SRC_FILES := com.android.vending.apk
 LOCAL_MODULE_CLASS := APPS
@@ -789,32 +579,32 @@ LOCAL_MODULE_OWNER := google
 LOCAL_DEX_PREOPT := false
 include $(BUILD_PREBUILT)
 
-#include $(CLEAR_VARS)
+include $(CLEAR_VARS)
 # AndroidForWork : 6.0-2280749
-#LOCAL_MODULE := AndroidForWork
-#LOCAL_SRC_FILES := com.google.android.androidforwork.apk
-#LOCAL_MODULE_CLASS := APPS
-#LOCAL_MODULE_TAGS := optional
-#LOCAL_CERTIFICATE := PRESIGNED
-#LOCAL_PRIVILEGED_MODULE := true
-#LOCAL_MODULE_OWNER := google
-#LOCAL_DEX_PREOPT := false
-#include $(BUILD_PREBUILT)
-
-#include $(CLEAR_VARS)
-# GCS : C.1.6.4 (2107901)
-#LOCAL_MODULE := GCS
-#LOCAL_SRC_FILES := com.google.android.apps.gcs.apk
-#LOCAL_MODULE_CLASS := APPS
-#LOCAL_MODULE_TAGS := optional
-#LOCAL_CERTIFICATE := PRESIGNED
-#LOCAL_PRIVILEGED_MODULE := true
-#LOCAL_MODULE_OWNER := google
-#LOCAL_DEX_PREOPT := false
-#include $(BUILD_PREBUILT)
+LOCAL_MODULE := AndroidForWork
+LOCAL_SRC_FILES := com.google.android.androidforwork.apk
+LOCAL_MODULE_CLASS := APPS
+LOCAL_MODULE_TAGS := optional
+LOCAL_CERTIFICATE := PRESIGNED
+LOCAL_PRIVILEGED_MODULE := true
+LOCAL_MODULE_OWNER := google
+LOCAL_DEX_PREOPT := false
+include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-# ConfigUpdater : 6.0-2256973
+# GCS : C.1.6.7 (2466695)
+LOCAL_MODULE := GCS
+LOCAL_SRC_FILES := com.google.android.apps.gcs.apk
+LOCAL_MODULE_CLASS := APPS
+LOCAL_MODULE_TAGS := optional
+LOCAL_CERTIFICATE := PRESIGNED
+LOCAL_PRIVILEGED_MODULE := true
+LOCAL_MODULE_OWNER := google
+LOCAL_DEX_PREOPT := false
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+# ConfigUpdater : 6.0.1
 LOCAL_MODULE := ConfigUpdater
 LOCAL_SRC_FILES := com.google.android.configupdater.apk
 LOCAL_MODULE_CLASS := APPS
@@ -826,7 +616,7 @@ LOCAL_DEX_PREOPT := false
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-# GoogleContacts : 1.2
+# GoogleContacts : 1.4.2
 LOCAL_MODULE := GoogleContacts
 LOCAL_SRC_FILES := com.google.android.contacts.apk
 LOCAL_MODULE_CLASS := APPS
@@ -839,7 +629,7 @@ LOCAL_DEX_PREOPT := false
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-# GoogleDialer : 2.2
+# GoogleDialer : 2.3.17
 LOCAL_MODULE := GoogleDialer
 LOCAL_SRC_FILES := com.google.android.dialer.apk
 LOCAL_MODULE_CLASS := APPS
@@ -852,7 +642,7 @@ LOCAL_DEX_PREOPT := false
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-# GoogleFeedback : 6.0-2256973
+# GoogleFeedback : 6.0.1
 LOCAL_MODULE := GoogleFeedback
 LOCAL_SRC_FILES := com.google.android.feedback.apk
 LOCAL_MODULE_CLASS := APPS
@@ -864,7 +654,7 @@ LOCAL_DEX_PREOPT := false
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-# Velvet : 5.6.24.19.arm
+# Velvet : 5.10.32.19.arm
 LOCAL_MODULE := Velvet
 LOCAL_SRC_FILES := com.google.android.googlequicksearchbox.apk
 LOCAL_MODULE_CLASS := APPS
@@ -877,7 +667,7 @@ LOCAL_DEX_PREOPT := false
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-# PrebuiltGmsCore : 8.4.89 (2428711-436)
+# PrebuiltGmsCore : 8.7.03 (2645110-430)
 LOCAL_MODULE := PrebuiltGmsCore
 LOCAL_SRC_FILES := com.google.android.gms.apk
 LOCAL_MODULE_CLASS := APPS
@@ -890,7 +680,7 @@ LOCAL_DEX_PREOPT := false
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-# GoogleServicesFramework : 6.0-2256973
+# GoogleServicesFramework : 6.0.1
 LOCAL_MODULE := GoogleServicesFramework
 LOCAL_SRC_FILES := com.google.android.gsf.apk
 LOCAL_MODULE_CLASS := APPS
@@ -902,7 +692,7 @@ LOCAL_DEX_PREOPT := false
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-# GoogleLoginService : 6.0-2256973
+# GoogleLoginService : 6.0.1
 LOCAL_MODULE := GoogleLoginService
 LOCAL_SRC_FILES := com.google.android.gsf.login.apk
 LOCAL_MODULE_CLASS := APPS
@@ -914,7 +704,7 @@ LOCAL_DEX_PREOPT := false
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-# GoogleOneTimeInitializer : 6.0-2256973
+# GoogleOneTimeInitializer : 6.0.1
 LOCAL_MODULE := GoogleOneTimeInitializer
 LOCAL_SRC_FILES := com.google.android.onetimeinitializer.apk
 LOCAL_MODULE_CLASS := APPS
@@ -927,7 +717,7 @@ LOCAL_DEX_PREOPT := false
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-# GooglePackageInstaller : 6.0-2256973
+# GooglePackageInstaller : 6.0.1
 LOCAL_MODULE := GooglePackageInstaller
 LOCAL_SRC_FILES := com.google.android.packageinstaller.apk
 LOCAL_MODULE_CLASS := APPS
@@ -940,7 +730,7 @@ LOCAL_DEX_PREOPT := false
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-# GooglePartnerSetup : 6.0-2256973
+# GooglePartnerSetup : 6.0.1
 LOCAL_MODULE := GooglePartnerSetup
 LOCAL_SRC_FILES := com.google.android.partnersetup.apk
 LOCAL_MODULE_CLASS := APPS
@@ -978,7 +768,7 @@ LOCAL_DEX_PREOPT := false
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-# GoogleBackupTransport : 6.0-2256973
+# GoogleBackupTransport : 6.0.1
 LOCAL_MODULE := GoogleBackupTransport
 LOCAL_SRC_FILES := com.google.android.backuptransport.apk
 LOCAL_MODULE_CLASS := APPS

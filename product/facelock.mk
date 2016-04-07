@@ -11,7 +11,7 @@ FACELOCK_DATA := \
 	vendor/pittpatt/models/detection/multi_pose_face_landmark_detectors.8/nose_base-y0-yi45-p0-pi45-r0-ri20.lg_32-tree7-wmd.bin \
 	vendor/pittpatt/models/detection/multi_pose_face_landmark_detectors.8/left_eye-y0-yi45-p0-pi45-r0-ri20.lg_32-tree7-wmd.bin \
 	vendor/pittpatt/models/recognition/face.face.y0-y0-71-N-tree_7-wmd.bin \
-	vendor/lib/libfrsdk.so \
+	lib/libfrsdk.so \
 	lib/libfacelock_jni.so \
 	lib/libfilterpack_facedetect.so \
 

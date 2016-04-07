@@ -1,19 +1,15 @@
 GMS_FRWDIR := vendor/google/framework
+
+GMS_JAR := \
+	com.google.widevine.software.drm.jar \
+	com.google.android.media.effects.jar \
+	com.google.android.maps.jar \
+
 ifeq ($(TARGET_PRODUCT),occam)
-GMS_JAR := \
+GMS_JAR += \
 	com.google.android.camera2.jar \
+        com.google.android.camera.experimental2015.jar \
 	com.google.android.dialer.support.jar \
-	com.google.android.maps.jar \
-	com.google.android.media.effects.jar \
-	com.google.widevine.software.drm.jar \
-
-endif
-
-ifeq ($(TARGET_PRODUCT),nakasig)
-GMS_JAR := \
-	com.google.android.maps.jar \
-	com.google.android.media.effects.jar \
-	com.google.widevine.software.drm.jar \
 
 endif
 

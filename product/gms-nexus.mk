@@ -22,9 +22,6 @@ PRODUCT_PACKAGES += \
 
 endif
 
-#	AndroidForWork \
-#	GCS \
-
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.error.receiver.system.apps=com.google.android.gms \
 
