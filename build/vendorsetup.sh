@@ -2,10 +2,6 @@ generate() {
   python3 $(gettop)/vendor/google/build/tools/generate.py "$@"
 }
 
-apkdown() {
-  python3 $(gettop)/vendor/google/build/tools/apkdown "$@"
-}
-
 cleanodex() {
   rm -rf $OUT/system/framework $OUT/system/app $OUT/system/priv-app
   find $OUT/ -name "*.jar" -exec rm -f {} \;

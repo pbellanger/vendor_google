@@ -11,7 +11,7 @@ GMS_DATA_FILES := \
 
 ifeq ($(TARGET_PRODUCT),occam)
 GMS_DATA_FILES += \
-        etc/permissions/com.google.android.camera2.xml \
+#        etc/permissions/com.google.android.camera2.xml \
         etc/permissions/com.google.android.camera.experimental2015.xml \
         etc/permissions/com.google.android.dialer.support.xml \
 

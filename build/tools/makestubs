@@ -1,0 +1,20 @@
+for APK in  apps/com.google.android.youtube.apk \
+    apps/com.google.android.apps.books.apk \
+    apps/com.google.android.videos.apk \
+    apps/com.google.android.apps.docs.apk \
+    apps/com.google.android.apps.cloudprint.apk \
+    apps/com.google.android.apps.plus.apk \
+    apps/com.google.android.apps.translate.apk \
+    apps/com.google.android.apps.fitness.apk \
+    apps/com.google.android.apps.maps.apk \
+    apps/com.google.android.talk.apk \
+    apps/com.google.android.apps.docs.editors.docs.apk \
+    apps/com.google.android.apps.docs.editors.sheets.apk \
+    apps/com.google.android.apps.docs.editors.slides.apk \
+    apps/com.google.android.apps.magazines.apk \
+    apps/com.google.android.apps.messaging.apk \
+    apps/com.google.android.keep.apk
+do
+   ./src/stubs/generate_stub $APK
+done
+

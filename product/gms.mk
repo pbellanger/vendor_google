@@ -18,8 +18,8 @@ PRODUCT_PACKAGES := \
 	talkback \
 	GoogleEarth \
 
-#PRODUCT_PACKAGES += \
-#	PrebuiltBugle \
+PRODUCT_PACKAGES += \
+	PrebuiltBugle \
 #	HangOutDialer \
 #	PdfViewer \
 

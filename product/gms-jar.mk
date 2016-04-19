@@ -7,7 +7,7 @@ GMS_JAR := \
 
 ifeq ($(TARGET_PRODUCT),occam)
 GMS_JAR += \
-	com.google.android.camera2.jar \
+#	com.google.android.camera2.jar \
         com.google.android.camera.experimental2015.jar \
 	com.google.android.dialer.support.jar \
 
