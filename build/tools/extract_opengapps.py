@@ -59,11 +59,11 @@ COMMON_APKS = (
 	('GApps', 'translate', ('nodpi', ), 'app', 'TranslatePrebuilt'),
 	('GApps', 'webviewgoogle', ('nodpi', ), 'app', 'WebViewGoogle'),
 	('GApps', 'youtube', ('nodpi', '160', '240', '320', '480', ), 'app', 'YouTube'),
+	('GApps', 'cameragoogle', ('nodpi', ), 'app', 'GoogleCamera'),
+	('GApps', 'dialergoogle', ('nodpi', ), 'priv-app', 'GoogleDialer'),
 )
 OCCAM_APKS = (
 	('Core', 'setupwizarddefault', ('nodpi', ), 'priv-app', 'SetupWizard'),
-	('GApps', 'cameragoogle', ('nodpi', ), 'app', 'GoogleCamera'),
-	('GApps', 'dialergoogle', ('nodpi', ), 'priv-app', 'GoogleDialer'),
 )
 NAKASIG_APKS = (
 	('Core', 'setupwizardtablet', ('nodpi', ), 'priv-app', 'SetupWizard'),
