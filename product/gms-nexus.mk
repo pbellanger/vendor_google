@@ -9,7 +9,7 @@ PRODUCT_PACKAGES := \
 	LatinImeGoogle \
 	GoogleHome \
 	Music2 \
-	Hangouts \
+#	Hangouts \
 	GoogleTTS \
 	GoogleContacts \
 	GoogleFeedback \

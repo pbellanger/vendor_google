@@ -1,15 +1,15 @@
 PRODUCT_PACKAGES := \
 	Books \
 	CloudPrint2 \
-	Drive \
+#	Drive \
 	PlusOne \
 	FitnessPrebuilt \
 	GoogleEars \
 	Newsstand \
 	PrebuiltKeep \
-	EditorsDocs \
-	EditorsSheets \
-	EditorsSlides \
+#	EditorsDocs \
+#	EditorsSheets \
+#	EditorsSlides \
 	PlayGames \
 	PrebuiltNewsWeather \
 	Translate \
