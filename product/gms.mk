@@ -16,12 +16,15 @@ PRODUCT_PACKAGES := \
 	Videos \
 	YouTube \
 	talkback \
-	GoogleEarth \
-
-PRODUCT_PACKAGES += \
 	PrebuiltBugle \
 #	HangOutDialer \
 #	PdfViewer \
+
+ifeq ($(TARGET_PRODUCT),occam)
+PRODUCT_PACKAGES += \
+	GoogleEarth \
+
+endif
 
 $(call inherit-product-if-exists, vendor/google/product/gms-core.mk)
 
