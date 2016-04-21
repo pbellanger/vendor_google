@@ -27,7 +27,7 @@ need_to_odex = (
     'GoogleLoginService',
     'GoogleBackupTransport',
     'GoogleDialer',
-    'AndroidForWork',
+#   'AndroidForWork',
     'ConfigUpdater',
     'GoogleFeedback',
 )
@@ -103,7 +103,7 @@ packages = (
 
 privileged_packages = (
 	('com.android.vending.apk', 'Phonesky', ),
-	('com.google.android.androidforwork.apk', 'AndroidForWork', ),
+#	('com.google.android.androidforwork.apk', 'AndroidForWork', ),
 	('com.google.android.apps.gcs.apk', 'GCS', ),
 	('com.google.android.configupdater.apk', 'ConfigUpdater', ),
 	('com.google.android.contacts.apk', 'GoogleContacts', 'Contacts', ),
