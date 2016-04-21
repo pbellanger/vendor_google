@@ -15,7 +15,7 @@ COMMON_APKS = (
 	('Core', 'gsfcore', ('nodpi', ), 'priv-app', 'GoogleServicesFramework'),
 	('Core', 'gsflogin', ('nodpi', ), 'priv-app', 'GoogleLoginService'),
 	('Core', 'vending', ('nodpi', ), 'priv-app', 'Phonesky'),
-	('GApps', 'androidforwork', ('nodpi',), 'priv-app', 'AndroidForWork'),
+#	('GApps', 'androidforwork', ('nodpi',), 'priv-app', 'AndroidForWork'),
 	('GApps', 'androidpay', ('nodpi', '480', '640',), 'app', 'Wallet'),
 	('GApps', 'books', ('nodpi', ), 'app', 'Books'),
 	('GApps', 'calculatorgoogle', ('nodpi', ), 'app', 'CalculatorGoogle'),
@@ -80,7 +80,7 @@ OPENGAPPS_DATA = [
     './Core/defaultframework/common/etc/permissions/com.google.android.maps.xml',
     './Core/defaultframework/common/etc/permissions/com.google.android.media.effects.xml',
     './Core/defaultframework/common/etc/permissions/com.google.widevine.software.drm.xml',
-    './GApps/dialergoogle/common/etc/permissions/com.google.android.dialer.support.xml',
+    './GApps/dialerframework/common/etc/permissions/com.google.android.dialer.support.xml',
     './GApps/cameragooglelegacy/common/etc/permissions/com.google.android.camera2.xml',
     './GApps/cameragoogle/common/etc/permissions/com.google.android.camera.experimental2015.xml' ]
 # Type the following command in the opengapps build directory: find . -name *.bin
@@ -112,7 +112,7 @@ OPENGAPPS_JAR = [
     './Core/defaultframework/common/framework/com.google.widevine.software.drm.jar',
     './Core/defaultframework/common/framework/com.google.android.media.effects.jar',
     './Core/defaultframework/common/framework/com.google.android.maps.jar',
-    './GApps/dialergoogle/common/framework/com.google.android.dialer.support.jar',
+    './GApps/dialerframework/common/framework/com.google.android.dialer.support.jar',
     './GApps/cameragooglelegacy/common/framework/com.google.android.camera2.jar',
     './GApps/cameragoogle/common/framework/com.google.android.camera.experimental2015.jar' ]
 # Type the following command in the opengapps build directory: find . -name *.so
